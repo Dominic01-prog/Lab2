@@ -1,40 +1,42 @@
-//Author: Dominic Savaglio
-//Collaborator: 
-//Collaborator:
-//Collaborator:
+//Author: Dominic Savaglio djs7129@psu.edu
+//Collaborator: Jeffrey Shi jjs7487@psu.edu
+//Collaborator: Adam Walascheck ajw6322@psu.edu
 //Section: 10R
-//Breakout: 
+//Breakout: 13
 #include <stdio.h>
 #include <readline/readline.h>
+#include <stdlib.h>
 int main(void) {
-  char *name = readline("Enter your CMPSC 131 grade: ");
-  if(1) {
-    printf("A");
+  char *grade = readline("Enter your CMPSC 131 grade: ");
+  double percentage = atof(grade);
+  char *letter_grade = 0;
+  if(percentage >= 93.0) {
+    letter_grade = "A";
   }
-  else if(2) {
-    printf("A-");
+  else if(percentage >= 90.0) {
+    letter_grade = "A-";
   }
-  else if(3) {
-    printf("B+");
+  else if(percentage >= 87.0) {
+    letter_grade = "B+";
   }
-  else if(4) {
-    printf("B");
+  else if(percentage >= 83.0) {
+    letter_grade = "B";
   }
-  else if(5) {
-    printf("B-");
+  else if(percentage >= 80.0) {
+    letter_grade = "B-";
   }
-  else if(6) {
-    printf("C+");
+  else if(percentage >= 77.0) {
+    letter_grade = "C+";
   }
-  else if(7) {
-    printf("C");
+  else if(percentage >= 70.0) {
+    letter_grade = "C";
   }
-  else if(8) {
-    printf("D");
+  else if(percentage >= 60.0) {
+    letter_grade = "D";
   }
-  else if(9) {
-    printf("F");
+  else {
+    letter_grade = "F";
   }
-  printf("Hello World\n");
+  printf("Your letter grade for CMPSC 131 is: %s \n", letter_grade);
   return 0;
 }
